@@ -1,2 +1,2 @@
 /// @description Create variables & grid
-selectecd = noone
+selected = obj_player

@@ -5,6 +5,7 @@ global.Turn = Turn.PlayerTurn;
 numFollowers = 0;
 spd = 4;
 
+
 histroySize = 100;
 xMoveHistory = array_create(histroySize, x);
 yMoveHistory = array_create(histroySize, y);
