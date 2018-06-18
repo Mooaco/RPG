@@ -7,7 +7,8 @@ if (global.States == States.OutOfCombat)
 	instance_create_layer(0,0,"Grid",obj_grid);
 	scr_camera_unlock();
 	scr_snap_to_grid(obj_player);
-	scr_grid_draw_available();
+	scr_grid_draw_available(selected);
+	scr_destroy_followers()
 }else
 // Leave combat
 {
@@ -16,4 +17,5 @@ if (global.States == States.OutOfCombat)
 	instance_destroy(obj_grid_cell);
 	instance_destroy(obj_grid_cell_available);
 	scr_camera_lock(obj_player);
+	instance_create_layer(obj_player.x,obj_player.y,"Followers",obj_follower);
 }

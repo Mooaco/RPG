@@ -4,6 +4,10 @@ global.States = States.OutOfCombat;
 global.Turn = Turn.PlayerTurn;
 numFollowers = 0;
 spd = 4;
+moveRemaining = spd * CELL_SIZE;
+actions = 0;
+maxActions = 2;
+endTurn = false;
 
 
 histroySize = 100;
