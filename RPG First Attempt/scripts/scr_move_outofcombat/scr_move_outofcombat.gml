@@ -4,7 +4,6 @@ var _character = argument0
 var _speed = argument1
 var camera_target = camera_get_view_target(view_camera[0])
 
-
 // Keyboard Move Left
 if (keyboard_check(vk_left) || keyboard_check(ord("A")))
 {

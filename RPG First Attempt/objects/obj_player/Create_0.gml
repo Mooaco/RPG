@@ -1,7 +1,7 @@
 
 // Set Default States (should be with rest of game starting code)
 numFollowers = 0;
-spd = 4;
+spd = 6;
 moveRemaining = spd * CELL_SIZE;
 actions = 0;
 maxActions = 2;

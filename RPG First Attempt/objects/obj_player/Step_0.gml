@@ -13,12 +13,12 @@ if (endTurn)
 	endTurn = false;
 }
 
-//if (moveRemaining < (OFFSET + OFFSET / 2) && actions < maxActions)
-//{
-//	actions++;
-//	moveRemaining = spd * CELL_SIZE;
-//	scr_grid_draw_available(self);
-//}
+if (moveRemaining < (OFFSET + OFFSET / 2) && actions < maxActions)
+{
+	actions++;
+	moveRemaining = spd * CELL_SIZE;
+	scr_grid_draw_available(self);
+}
 
 // Move all variables down the array by 1
 for (var i = histroySize; i > 0; i -= 1)
