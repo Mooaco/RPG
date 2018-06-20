@@ -1,7 +1,7 @@
 /// @description Check for input
 
 
-if (mouse_check_button_pressed(mb_right) && global.States == States.InCombat)
+if (mouse_check_button_pressed(mb_left) && global.States == States.InCombat)
 {
 scr_move_combat(mouse_x,mouse_y,selected)
 scr_snap_to_grid(obj_player);

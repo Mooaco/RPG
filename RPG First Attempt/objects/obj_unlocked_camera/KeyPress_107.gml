@@ -1,0 +1,1 @@
+scr_camera_zoom(Camera_Zoom.ZoomIn);

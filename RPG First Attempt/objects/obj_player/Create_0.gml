@@ -1,7 +1,5 @@
 
 // Set Default States (should be with rest of game starting code)
-global.States = States.OutOfCombat;
-global.Turn = Turn.PlayerTurn;
 numFollowers = 0;
 spd = 4;
 moveRemaining = spd * CELL_SIZE;
