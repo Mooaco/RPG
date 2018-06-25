@@ -12,6 +12,8 @@ if (argument_count > 1) hardSnap = argument[1];
 var reDrawGrid = false;
 if (argument_count > 2) reDrawGrid = argument[2];
 
+mp_grid_clear_all(global.CombatGrid);
+
 with (character)
 {
 	// Find the centre of the closest cell
@@ -39,8 +41,8 @@ with (character)
 		y = yy;
 		if (!hardSnap)
 		{
-		mp_grid_path(global.CombatGrid, global.Path, x, y, _x, _y, true);
-		path_start(global.Path, combatSpd, path_action_stop, false);
+			mp_grid_path(global.CombatGrid, global.Path, x, y, _x, _y, true);
+			path_start(global.Path, combatSpd, path_action_stop, false);
 		}
 		global.Moving = reDrawGrid;
 	}else
