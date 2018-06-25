@@ -5,24 +5,29 @@ var zoom_Increment = 0.1;
 var min_Zoom = 0.3;
 var max_Zoom = 3;
 
-#macro DefaultCameraWidth 1280
-#macro DefaultCameraHeight 960
+#macro CameraDefaultWidth 1280
+#macro CameraDefaultHeight 960
+#macro CameraVeryClose 0.2
+#macro CameraClose 0.5
+#macro CameraDefault 1
+#macro CameraFar 2
+#macro CameraVeryFar 3
+#macro CameraZoomIn -1
+#macro CameraZoomOut -2
 
 if (zoom >= min_Zoom && zoom <= max_Zoom)
 {
-	camera_set_view_size(view_camera[0], DefaultCameraWidth * zoom, DefaultCameraHeight * zoom)
-	//view_set_wport(view_camera[0],  DefaultCameraWidth * zoom)
-	//view_set_hport(view_camera[0],  DefaultCameraHeight * zoom)
-	global.Current_Zoom *= zoom;
+	camera_set_view_size(view_camera[0], CameraDefaultWidth * zoom, CameraDefaultHeight * zoom)
+	global.CurrentZoom *= zoom;
 }
 
-if (zoom == Camera_Zoom.ZoomIn && global.Current_Zoom > min_Zoom)
+if (zoom == CameraZoomIn && global.CurrentZoom > min_Zoom)
 {
-	global.Current_Zoom -= zoom_Increment;
-	camera_set_view_size(view_camera[0], DefaultCameraWidth * global.Current_Zoom, DefaultCameraHeight * global.Current_Zoom)
+	global.CurrentZoom -= zoom_Increment;
+	camera_set_view_size(view_camera[0], CameraDefaultWidth * global.CurrentZoom, CameraDefaultHeight * global.CurrentZoom)
 	
-}else if (zoom == Camera_Zoom.ZoomOut && global.Current_Zoom < max_Zoom)
+}else if (zoom == CameraZoomOut && global.CurrentZoom < max_Zoom)
 {
-	global.Current_Zoom += zoom_Increment;
-	camera_set_view_size(view_camera[0], DefaultCameraWidth * global.Current_Zoom, DefaultCameraHeight * global.Current_Zoom)
+	global.CurrentZoom += zoom_Increment;
+	camera_set_view_size(view_camera[0], CameraDefaultWidth * global.CurrentZoom, CameraDefaultHeight * global.CurrentZoom)
 }

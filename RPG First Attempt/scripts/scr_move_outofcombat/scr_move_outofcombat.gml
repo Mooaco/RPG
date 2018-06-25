@@ -1,15 +1,20 @@
-//scr_move_outofcombat(character,speed)
+//scr_move_outofcombat(character)
 
 var _character = argument0
-var _speed = argument1
+var _speed = argument0.spd
 var camera_target = camera_get_view_target(view_camera[0])
+
+if (obj_camera.unlocked == true) camera_set_view_target(view_camera[0],obj_camera)
 
 // Keyboard Move Left
 if (keyboard_check(vk_left) || keyboard_check(ord("A")))
 {
-	if (camera_target == obj_unlocked_camera)
+	if (obj_camera.unlocked == true)
 	{
-		with (obj_unlocked_camera) if (x - cameraSpd - (camera_get_view_width(view_camera[0]) / 2) > 0) x -= cameraSpd;
+		with (obj_camera) if (x - cameraSpd - (camera_get_view_width(view_camera[0]) / 2) > 0)
+		{
+			x -= cameraSpd;
+		}
 	}else
 	{
 		with (_character) if (x - spd - OFFSET > 0) x -= spd;
@@ -19,9 +24,9 @@ if (keyboard_check(vk_left) || keyboard_check(ord("A")))
 // Keyboard Move Right	  
 if (keyboard_check(vk_right) || keyboard_check(ord("D")))
 {
-	if (camera_target == obj_unlocked_camera)
+	if (obj_camera.unlocked == true)
 	{
-		with (obj_unlocked_camera) if (x + cameraSpd  + (camera_get_view_width(view_camera[0]) / 2) < room_width) x += cameraSpd;
+		with (obj_camera) if (x + cameraSpd  + (camera_get_view_width(view_camera[0]) / 2) < room_width) x += cameraSpd;
 	}else
 	{
 		with (_character) if (x + spd  + OFFSET < room_width) x += spd;
@@ -31,9 +36,9 @@ if (keyboard_check(vk_right) || keyboard_check(ord("D")))
 // Keyboard Move Up
 if (keyboard_check(vk_up) || keyboard_check(ord("W")))
 {
-	if (camera_target == obj_unlocked_camera)
+	if (obj_camera.unlocked == true)
 	{
-		with (obj_unlocked_camera) if (y - cameraSpd - (camera_get_view_height(view_camera[0]) / 2) > 0) y -= cameraSpd;
+		with (obj_camera) if (y - cameraSpd - (camera_get_view_height(view_camera[0]) / 2) > 0) y -= cameraSpd;
 	}else
 	{
 		with (_character) if (y - spd - OFFSET > 0) y -= spd;
@@ -43,9 +48,9 @@ if (keyboard_check(vk_up) || keyboard_check(ord("W")))
 // Keyboard Move Down
 if (keyboard_check(vk_down) || keyboard_check(ord("S")))
 {
-		if (camera_target == obj_unlocked_camera)
+		if (obj_camera.unlocked == true)
 		{
-			with (obj_unlocked_camera) if (y + cameraSpd + (camera_get_view_height(view_camera[0]) / 2) < room_height) y += cameraSpd;
+			with (obj_camera) if (y + cameraSpd + (camera_get_view_height(view_camera[0]) / 2) < room_height) y += cameraSpd;
 		}else
 		{
 			with (_character) if (y + spd  + OFFSET < room_height) y += spd;
@@ -58,7 +63,7 @@ if (keyboard_check(vk_down) || keyboard_check(ord("S")))
 //camera_set_view_pos(view_camera[0], camera_get_view_x(view_camera[0]) - cameraSpd, camera_get_view_y(view_camera[0]))
 
 // Move to Mouse
-if (mouse_check_button(mb_left) && global.States == States.OutOfCombat)
+if (mouse_check_button(mb_left) && !global.InCombat)
 {
 	if (mouse_x - OFFSET > _character.x) // Is mouse left of the character?
 	{

@@ -2,14 +2,17 @@
 
 draw_self()
 
-if (global.States == States.InCombat)
+if (global.InCombat)
 {
 	var MarginFromTop = y + 40
-	var HorizontalCentre = x-100
+	var HorizontalCentre = x - 5
 
-	draw_set_colour(c_white);
 	// Draw actions remaining
-	draw_text(HorizontalCentre, MarginFromTop, "Actions remaining " + string(maxActions-actions) )
+	draw_set_colour(c_black);
+	draw_text(HorizontalCentre+2, MarginFromTop+2, string(actions))
+	draw_set_colour(c_white);
+	draw_text(HorizontalCentre, MarginFromTop, string(actions))
+	
 	// Draw movement remaining at mouse
 	if (instance_position(mouse_x, mouse_y, obj_grid_cell) != noone) 
 	{

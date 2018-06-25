@@ -1,4 +1,8 @@
 ///scr_pythagoras(x1,y1,x2,y2) zz
+///@param x1
+///@param y1
+///@param x2
+///@param y2
 
 var x1 = argument0
 var y1 = argument1

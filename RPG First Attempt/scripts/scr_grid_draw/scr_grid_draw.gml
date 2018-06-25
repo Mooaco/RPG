@@ -1,3 +1,6 @@
+///@desc scr_grid_draw(start_x, start_y, end_x, end_y)
+
+
 var horizontalCells = floor(room_width / CELL_SIZE);
 var verticalCells = floor(room_height / CELL_SIZE);
 

@@ -6,5 +6,5 @@
 // Adding additional delay for each subsequent follower
 delay = followerNumber * followerDelay
 
-x = obj_player.xMoveHistory[delay];
-y = obj_player.yMoveHistory[delay];
+x = ds_list_find_value(obj_player.xMoveHistory, delay)
+y = ds_list_find_value(obj_player.yMoveHistory, delay)
