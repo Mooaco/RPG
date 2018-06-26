@@ -20,6 +20,8 @@ if (global.PlayersTurn)
 	}
 
 	// All key sets
-	scr_move_outofcombat(global.Selected)
+	scr_move_outofcombat(global.Selected);
 
+	// Draw Highlighted
+	scr_grid_draw_highlighted();
 }

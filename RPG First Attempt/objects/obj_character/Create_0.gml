@@ -5,10 +5,13 @@ spd = 3;
 combatSpd = 3;
 combatSpdPix = combatSpd * CELL_SIZE;
 moveRemaining = combatSpdPix;
-maxActions = 1;
+maxActions = 3;
 actions = maxActions;
 attackRange = MELEE_RANGE
 attackRangePix = attackRange * CELL_SIZE;
+defaultAttackAbility = "Melee";
+defaultSupportAbility = "Heal";
+
 
 historySize = 100;
 xMoveHistory = array_create(historySize);

@@ -7,8 +7,8 @@ var max_Zoom = 3;
 
 #macro CameraDefaultWidth 1280
 #macro CameraDefaultHeight 960
-#macro CameraVeryClose 0.2
-#macro CameraClose 0.5
+#macro CameraVeryClose 0.7
+#macro CameraClose 0.8
 #macro CameraDefault 1
 #macro CameraFar 2
 #macro CameraVeryFar 3

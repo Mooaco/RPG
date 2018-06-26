@@ -17,10 +17,14 @@ if (argument_count > 2)
 
 if (!global.Moving)
 {
+	// destroy existing cells
 	instance_destroy(obj_grid_cell_available);
 	instance_destroy(obj_grid_cell_attackable);
+	
+	// clear blocked grid cells
 	mp_grid_clear_all(global.CombatGrid);
 	
+	// add blocked grid cells
 	with (obj_entity)
 	{
 		if (id != character.id)
@@ -28,7 +32,11 @@ if (!global.Moving)
 			mp_grid_add_cell(global.CombatGrid, floor(x / CELL_SIZE), floor(y / CELL_SIZE))
 		}
 	}
+	
+	// Block test walls
+	with (obj_wall) mp_grid_add_cell(global.CombatGrid, floor(x / CELL_SIZE), floor(y / CELL_SIZE))
 
+	// draw availble spaces
 	with (character)
 	{
 		for (var h = OFFSET; h < room_width; h += CELL_SIZE)
@@ -41,20 +49,12 @@ if (!global.Moving)
 				// If in movement range, mark cell as available
 				if (mp_grid_path(global.CombatGrid, global.Path, character.x, character.y, h, v, true))
 				{
-					if (path_get_length(global.Path) <= moveRemaining) 
+					if (path_get_length(global.Path) <= moveRemaining && path_get_length(global.Path) > OFFSET) 
 					{
-						instance_create_layer(h, v, "Grid", obj_grid_cell_available);
+						var cell = instance_create_layer(h, v, "Grid", obj_grid_cell_available);
+						scr_grid_draw_attackable_nearby(cell.x, cell.y);					
 					}
-				
-				// Check if entity in cell can be attacked and is not the player calling it
-				}else if (entity != noone && entity.id != character.id)
-					{
-						// Check if entity is attackable and in range of the character
-						if (entity.attackable && scr_pythagoras(x,y,entity.x,entity.y) <= character.attackRangePix)
-						{
-							instance_create_layer(h, v, "Grid", obj_grid_cell_attackable);
-						}
-					}
+				}
 			}
 		}
 	}
