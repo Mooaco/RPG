@@ -5,12 +5,12 @@ if (global.InCombat = false)
 {
 	global.InCombat = true;
 	instance_create_layer(0,0,"Grid",obj_grid);
+	scr_grid_snap(global.Selected, false, true);
 	scr_camera_lock(false);
 	scr_camera_jump_to_player();
-	scr_grid_snap(global.Selected, false, true);
 	scr_destroy_followers()
-}else
-// Leave combat
+}
+else // Leave combat
 {
 	global.InCombat = false;
 	instance_destroy(obj_grid);

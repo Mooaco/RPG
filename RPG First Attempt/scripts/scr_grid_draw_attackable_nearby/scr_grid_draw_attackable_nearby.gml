@@ -5,7 +5,7 @@
 
 var cellsToCheck = 8; // the 8 cells around the cell created
 var cellsChecked = 0; 
-var _dir = 0; // 0 = start scanning in the cell below and move clockwise
+var _dir = Dir.Down; // the starting direction to check
 var _x = argument[0];
 var _y = argument[1];
 var cellType = obj_grid_cell_attackable
@@ -17,16 +17,16 @@ for (var i = 1; i >= 0; i += 0.5)
 	{
 		switch (_dir)
 		{
-			case 0: _y += CELL_SIZE; break;
-			case 1: _x -= CELL_SIZE; break;
-			case 2: _y -= CELL_SIZE; break;
-			case 3: _x += CELL_SIZE; break;
+			case Dir.Down: _y += CELL_SIZE; break;
+			case Dir.Right: _x -= CELL_SIZE; break;
+			case Dir.Up: _y -= CELL_SIZE; break;
+			case Dir.Left: _x += CELL_SIZE; break;
 		}
-		var entity = instance_position(_x, _y, obj_entity)
-
+		
 		if (!instance_position(_x, _y, obj_grid_cell_attackable))
 		{
-			if (entity != noone && entity.id != global.Selected.id && entity.attackable)
+			var entity = instance_position(_x, _y, obj_entity)
+			if (entity != noone && entity.id != global.Selected.id && entity.attackable && entity.hostile)
 			{
 				instance_create_layer(_x, _y, "Grid", cellType);
 			}

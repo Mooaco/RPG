@@ -1,8 +1,8 @@
 {
-    "id": "7d5faf2c-23a3-4356-9679-434cc1585ca3",
+    "id": "10640483-2197-44f8-b845-4a01c2bccfb7",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "scr_grid_find_closest_cell",
+    "name": "scr_rows_to_cells",
     "IsCompatibility": false,
     "IsDnD": false
 }

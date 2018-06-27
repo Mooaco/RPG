@@ -23,6 +23,6 @@ instance_create_layer(global.SpawnLocation_x ,global.SpawnLocation_y, "Grid", ob
 global.Selected = instance_create_layer(global.SpawnLocation_x ,global.SpawnLocation_y, "Player", obj_player);
 instance_create_layer(global.SpawnLocation_x ,global.SpawnLocation_y, "Camera", obj_camera);
 
-scr_character_spawn(obj_character, 3, 1250, 1000, true);
+scr_character_spawn(obj_character, 3, 1250, 1000, true, true);
 scr_camera_lock(true);
 scr_camera_zoom(CameraClose);

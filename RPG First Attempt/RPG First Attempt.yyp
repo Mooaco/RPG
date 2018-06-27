@@ -71,6 +71,14 @@
             }
         },
         {
+            "Key": "10640483-2197-44f8-b845-4a01c2bccfb7",
+            "Value": {
+                "id": "6a0814bd-cf77-4999-8e81-61bdb08ccb43",
+                "resourcePath": "scripts\\scr_rows_to_cells\\scr_rows_to_cells.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "1301fb43-57dc-4b96-a323-e055402ecd6d",
             "Value": {
                 "id": "663a9da0-b4d3-47d2-a535-403fb0207d90",
@@ -191,14 +199,6 @@
             }
         },
         {
-            "Key": "569cb2ad-b0fc-4340-abe9-9924a88aa364",
-            "Value": {
-                "id": "c2427221-cb76-45af-bd8e-92c019882cc9",
-                "resourcePath": "objects\\obj_combat\\obj_combat.yy",
-                "resourceType": "GMObject"
-            }
-        },
-        {
             "Key": "5861ba1a-0077-4e80-9c2f-37f96b82780b",
             "Value": {
                 "id": "c074011d-2a52-4a3b-be8d-f2c4c49e7130",
@@ -274,7 +274,7 @@
             "Key": "7d5faf2c-23a3-4356-9679-434cc1585ca3",
             "Value": {
                 "id": "10e1e841-b4aa-45c8-a067-d638ab268771",
-                "resourcePath": "scripts\\scr_grid_find_closest_cell\\scr_grid_find_closest_cell.yy",
+                "resourcePath": "scripts\\scr_grid_find_closest_free_cell\\scr_grid_find_closest_free_cell.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -553,7 +553,6 @@
     ],
     "script_order": [
         "64548358-532c-4c63-afa0-f209f7984348",
-        "bb9b9fb0-0a41-45a1-bd8e-28de6f0428dc",
         "dd6e9205-8ecc-429a-bfd5-492002c126e6",
         "b4a25dde-4950-4f7f-932a-5ec6610fda1a",
         "865dc2d6-6b85-451a-8d00-a84e4022c724",
@@ -564,13 +563,15 @@
         "64024003-6d5a-49fa-84b4-39484addbc92",
         "fe42da3c-fbe0-4148-afd6-74f1c2b5a7a6",
         "7d5faf2c-23a3-4356-9679-434cc1585ca3",
+        "10640483-2197-44f8-b845-4a01c2bccfb7",
         "048e5561-1549-4c6d-89bc-9333da9ee5f1",
         "b7282cd9-cedb-455f-bacd-9e99c94a7c95",
         "dfae45e1-f7d5-4f0c-af91-6f9b6fe88188",
         "e34b8aee-481b-4f0a-869e-dda1688e6f3d",
         "3df2d751-aeb7-4e98-84d7-e52bc0cbe942",
         "9f244eee-13b8-44eb-8265-0b302981b8bc",
-        "8442309c-09d8-44a4-8cff-1326ff66843e"
+        "8442309c-09d8-44a4-8cff-1326ff66843e",
+        "bb9b9fb0-0a41-45a1-bd8e-28de6f0428dc"
     ],
     "tutorial": ""
 }
