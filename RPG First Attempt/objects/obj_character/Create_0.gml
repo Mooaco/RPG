@@ -11,6 +11,9 @@ attackRange = MELEE_RANGE
 attackRangePix = attackRange * CELL_SIZE;
 defaultAttackAbility = "Melee";
 defaultSupportAbility = "Heal";
+hp = 1;
+maxHp = hp;
+
 
 
 historySize = 100;

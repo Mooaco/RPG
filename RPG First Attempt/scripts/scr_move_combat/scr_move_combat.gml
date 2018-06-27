@@ -29,10 +29,7 @@ if (!global.Moving)
 				instance_destroy(obj_grid_cell_available);
 				path_start(global.Path, 3, path_action_stop, false);
 				global.Moving = true;
-		
-				return true;
 			}
 		}
 	}
 }
-return false;

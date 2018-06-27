@@ -24,20 +24,20 @@ if (global.PlayersTurn)
 			// Check if trying to attack
 			}else if (instance_position(mouse_x, mouse_y, obj_grid_cell_attackable))
 			{
-				if (instance_position(mouse_x, mouse_y, obj_grid_cell_attackable > global.Selected.attackRangePix))
+				global.Target = instance_position(mouse_x, mouse_y, obj_entity);
+				global.Attacking = true;
+				// If out of range move closer
+				if (scr_pythagoras(global.Target.x,global.Target.y, global.Selected.x, global.Selected.y) > global.Selected.attackRangePix)
 				{
-					var _cell = scr_grid_find_closest_free_cell(mouse_x, mouse_y, global.Selected);
+					var _cell = scr_grid_find_closest_free_cell(global.Target.x, global.Target.y, global.Selected);
 					scr_move_combat(_cell.x, _cell.y, global.Selected);
-					scr_character_attack(global.Selected.defaultAttackAbility, instance_position(mouse_x, mouse_y, obj_entity));
 				}
-				else
-					scr_character_attack(global.Selected.defaultAttackAbility, instance_position(mouse_x, mouse_y, obj_entity));
 			}
 		}
 		
 		/// IN COMBAT - LOGIC ///
 		
-		//Creates grid after moving
+		// Creates grid after moving
 		if (global.Moving == true)
 		{
 			with (global.Selected) if (path_position == 1)
@@ -47,6 +47,16 @@ if (global.PlayersTurn)
 			}
 		}
 		
+		// Uses basic attack if finished moving
+		if (global.Attacking == true)
+		{
+			if (global.Moving == false)
+			{
+				global.Attacking = false;
+				scr_character_attack(global.Selected.defaultAttackAbility, global.Target);
+				global.Selected.actions--;
+			}
+		}
 		
 		
 		

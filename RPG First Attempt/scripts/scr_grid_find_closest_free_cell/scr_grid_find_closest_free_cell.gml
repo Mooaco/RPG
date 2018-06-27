@@ -15,7 +15,6 @@ var cellsToCheck = scr_rows_to_cells(rowsToCheck);
 var cellsChecked = 0; 
 var _dir = 0; // 0 = start scanning in the cell below and move clockwise
 var cellType = obj_grid_cell_available;
-if (argument_count > 2) cellType = argument[2];
 var closestCell = noone;
 var closestCellDist = 100000;
 var tempPath = path_add();
@@ -51,3 +50,4 @@ for (var i = 1; i >= 0; i += 0.5)
 }
 
 path_delete(tempPath);
+return closestCell;

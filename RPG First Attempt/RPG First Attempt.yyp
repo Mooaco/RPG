@@ -303,6 +303,14 @@
             }
         },
         {
+            "Key": "8c64c25b-d8f9-4af2-a0e4-54aa3c314139",
+            "Value": {
+                "id": "130f1500-bc80-4a22-b203-a1d2dec21e25",
+                "resourcePath": "objects\\obj_floating_combat_text\\obj_floating_combat_text.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "9c687ed5-3d3f-4a76-81d5-19a15d82fad7",
             "Value": {
                 "id": "ea7cc8f0-e292-4a57-b52a-daeeb8b2b099",

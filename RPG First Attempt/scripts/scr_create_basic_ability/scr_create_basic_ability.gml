@@ -15,14 +15,17 @@ ability.name = argument[0];
 ability.range = argument[1];
 ability.numEffects = floor((argument_count - 2) / 2);
 
-for (var i = argument_count-2; i >= 2; i -= 2)
-{
-	ds_list_insert(ability.effect, 0, argument[i]);
-}
+ds_list_insert(ability.effect, 0, argument[2]);
+ds_list_insert(ability.effectValue, 0, argument[3]);
 
-for (var v = argument_count-1; v >= 3; v -= 2)
-{
-	ds_list_insert(ability.effectValue, 0, argument[i]);
-}
+//for (var i = argument_count-2; i >= 2; i -= 2)
+//{
+//	ds_list_insert(ability.effect, 0, argument[i]);
+//}
+
+//for (var v = argument_count-1; v >= 3; v -= 2)
+//{
+//	ds_list_insert(ability.effectValue, 0, argument[i]);
+//}
 
 return ability;
