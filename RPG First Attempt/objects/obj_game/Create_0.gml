@@ -1,11 +1,8 @@
-/// @description Creates variables & objects
-
 #macro CELL_SIZE 42
 #macro LEFT_OFFSET 0
 #macro RIGHT_OFFSET 0
 #macro OFFSET CELL_SIZE / 2
 #macro MELEE_RANGE 1.5
-
 
 global.CurrentZoom = 1;
 global.CameraLock = false;

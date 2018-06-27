@@ -46,11 +46,6 @@ if (global.PlayersTurn)
 				scr_grid_draw_available(global.Selected);
 			}
 		}
-		
-		
-		
-		
-		
 	}
 
 	// Out of combat key set
