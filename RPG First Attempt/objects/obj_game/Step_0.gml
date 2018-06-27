@@ -6,6 +6,7 @@ if (global.PlayersTurn)
 	/// IN COMBAT - INPUT ///
 	if (global.InCombat)
 	{
+		// End character turn
 		if (keyboard_check_pressed(ord("E"))) 
 		{
 			scr_character_startturn(global.Selected);
