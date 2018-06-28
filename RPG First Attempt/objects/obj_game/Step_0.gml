@@ -46,6 +46,7 @@ if (global.PlayersTurn)
 				scr_grid_draw_available(global.Selected);
 			}
 		}
+
 		
 		// Uses basic attack if finished moving
 		if (global.Attacking == true)
@@ -61,6 +62,7 @@ if (global.PlayersTurn)
 		
 		
 		
+
 	}
 
 	// Out of combat key set
