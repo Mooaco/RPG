@@ -447,6 +447,14 @@
             }
         },
         {
+            "Key": "d9583c39-4051-4a89-b101-8b456e477d3f",
+            "Value": {
+                "id": "6e9cb1c1-e034-4971-85c3-f6c43877257c",
+                "resourcePath": "datafiles_yy\\Abilities.ini.yy",
+                "resourceType": "GMIncludedFile"
+            }
+        },
+        {
             "Key": "db0387b3-e257-44d5-bbb1-e31a6fa7c754",
             "Value": {
                 "id": "c7378cdc-1783-4fef-9df5-43b2a80e4756",
@@ -572,8 +580,8 @@
         "fe42da3c-fbe0-4148-afd6-74f1c2b5a7a6",
         "7d5faf2c-23a3-4356-9679-434cc1585ca3",
         "10640483-2197-44f8-b845-4a01c2bccfb7",
-        "048e5561-1549-4c6d-89bc-9333da9ee5f1",
         "b7282cd9-cedb-455f-bacd-9e99c94a7c95",
+        "048e5561-1549-4c6d-89bc-9333da9ee5f1",
         "dfae45e1-f7d5-4f0c-af91-6f9b6fe88188",
         "e34b8aee-481b-4f0a-869e-dda1688e6f3d",
         "3df2d751-aeb7-4e98-84d7-e52bc0cbe942",
