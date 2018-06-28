@@ -4,7 +4,7 @@
     "mvc": "1.0",
     "IsDnDProject": false,
     "configs": [
-
+        
     ],
     "option_ecma": false,
     "parentProject": {
@@ -25,7 +25,7 @@
             }
         ],
         "hiddenResources": [
-
+            
         ],
         "projectPath": "${base_project}"
     },
@@ -207,14 +207,6 @@
             }
         },
         {
-            "Key": "5bd0a7ca-d8b5-4a69-a784-6851deafbc38",
-            "Value": {
-                "id": "560732f5-0277-4860-973a-efb3f459c667",
-                "resourcePath": "views\\5bd0a7ca-d8b5-4a69-a784-6851deafbc38.yy",
-                "resourceType": "GMFolder"
-            }
-        },
-        {
             "Key": "64024003-6d5a-49fa-84b4-39484addbc92",
             "Value": {
                 "id": "44ca1f5c-589b-41c8-90d2-0871f675306c",
@@ -351,14 +343,6 @@
             }
         },
         {
-            "Key": "aefe549d-595e-4f65-b7d7-5bd1c98d35c1",
-            "Value": {
-                "id": "09a8fcba-89e7-4720-ae3c-b3cf05a428e9",
-                "resourcePath": "datafiles_yy\\abilities.ini.yy",
-                "resourceType": "GMIncludedFile"
-            }
-        },
-        {
             "Key": "b212b836-bbc3-4869-aaeb-d4959d469901",
             "Value": {
                 "id": "b7b67590-1399-46d7-ab03-f8e0ba840368",
@@ -460,14 +444,6 @@
                 "id": "15e3e5b6-8ecf-4a63-bfa5-81a8c002ead7",
                 "resourcePath": "sprites\\spr_grid_blocked\\spr_grid_blocked.yy",
                 "resourceType": "GMSprite"
-            }
-        },
-        {
-            "Key": "d8d27f4f-d646-41db-a936-d3fc7bd96553",
-            "Value": {
-                "id": "9ab8cd22-5488-4596-bcc9-d81fafd16714",
-                "resourcePath": "views\\d8d27f4f-d646-41db-a936-d3fc7bd96553.yy",
-                "resourceType": "GMFolder"
             }
         },
         {
@@ -596,8 +572,8 @@
         "fe42da3c-fbe0-4148-afd6-74f1c2b5a7a6",
         "7d5faf2c-23a3-4356-9679-434cc1585ca3",
         "10640483-2197-44f8-b845-4a01c2bccfb7",
-        "b7282cd9-cedb-455f-bacd-9e99c94a7c95",
         "048e5561-1549-4c6d-89bc-9333da9ee5f1",
+        "b7282cd9-cedb-455f-bacd-9e99c94a7c95",
         "dfae45e1-f7d5-4f0c-af91-6f9b6fe88188",
         "e34b8aee-481b-4f0a-869e-dda1688e6f3d",
         "3df2d751-aeb7-4e98-84d7-e52bc0cbe942",
