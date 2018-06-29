@@ -25,7 +25,7 @@ for (var i = 1; i >= 0; i += 0.5)
 		
 		if (!instance_position(_x, _y, obj_grid_cell_attackable))
 		{
-			var entity = instance_position(_x, _y, obj_entity)
+			var entity = instance_position(_x, _y, obj_character)
 			if (entity != noone && entity.id != global.Selected.id && entity.attackable && entity.hostile)
 			{
 				instance_create_layer(_x, _y, "Grid", cellType);

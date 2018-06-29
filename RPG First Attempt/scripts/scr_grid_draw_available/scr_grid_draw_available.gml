@@ -29,7 +29,7 @@ if (!global.Moving)
 	{
 		if (id != character.id)
 		{
-			mp_grid_add_cell(global.CombatGrid, floor(x / CELL_SIZE), floor(y / CELL_SIZE))
+			mp_grid_add_rectangle(global.CombatGrid, bbox_left, bbox_top, bbox_right, bbox_bottom);
 		}
 	}
 	

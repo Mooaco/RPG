@@ -7,8 +7,8 @@
 global.CurrentZoom = 1;
 global.CameraLock = false;
 global.InCombat = false;
-global.SpawnLocation_x = room_width / 2 + 100
-global.SpawnLocation_y = room_height / 2
+global.SpawnLocation_x = 220
+global.SpawnLocation_y = 740
 global.CombatGrid = mp_grid_create(LEFT_OFFSET,RIGHT_OFFSET,room_width/CELL_SIZE,room_height/CELL_SIZE,CELL_SIZE,CELL_SIZE);
 global.Path = path_add();
 global.Moving = false;

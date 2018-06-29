@@ -57,10 +57,6 @@ if (global.PlayersTurn)
 				global.Selected.actions--;
 			}
 		}
-		
-		
-		
-		
 	}
 
 	// Out of combat key set
@@ -70,8 +66,24 @@ if (global.PlayersTurn)
 	}
 
 	// All key sets
-	scr_move_outofcombat(global.Selected);
+	scr_move_WSAD(global.Selected);
 
 	// Draw Highlighted
 	scr_grid_draw_highlighted();
+	
+	// Check to see if on trigger square
+	with (global.Selected)
+	{
+		if (place_meeting(x, y, obj_trigger) == true)
+		{
+				//trigger
+				x = 1590;
+				y = 920;
+		}
+	}
 }
+
+
+
+
+
