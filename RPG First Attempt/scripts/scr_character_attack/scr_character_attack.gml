@@ -3,33 +3,58 @@
 /// @param Target
 /// @param [Attacker]
 
-var ability = argument[0];
-ability = ds_map_find_value(global.Abilities, ability)
+var tempAbility = argument[0];
+var ability = noone;
+if ds_map_exists(global.Abilities, tempAbility) 
+{
+	tempAbility = ds_map_find_value(global.Abilities, tempAbility);
+	with (tempAbility) ability = instance_copy(false);
+}
 var target = argument[1];
 var attacker = global.Selected;
 if (argument_count > 2) attacker = argument[2];
 
 
-switch (ability.effect[| 0])
+with (ability)
 {
-	case Effect.Basic_Damage:
-	target.hp -= ability.effectValue[| 0];
-	global.DamageDealt = ability.effectValue[| 0];
-	break;
-	case Effect.Basic_Range:
-	target.hp -= ability.effectValue[| 0];
-	global.DamageDealt = ability.effectValue[| 0];
-	break;
-	case Effect.Basic_Heal: 
-	if (target.hp + ability.effectValue[| 0] > target.maxHp) 
+
+	x = attacker.x;
+	y = attacker.y;
+	
+	switch (effect[| 0])
 	{
-		target.hp = target.maxHp
+		case Effect.Basic_Damage:
+		target.hp -= effectValue[| 0];
+		global.DamageDealt = effectValue[| 0];
+		
+		break;
+		case Effect.Basic_Range:
+		target.hp -= effectValue[| 0];
+		global.DamageDealt = effectValue[| 0];
+		// create sprite and movement
+		sprite_index = spr_arrow;
+		direction = point_direction(x, y, target.x, target.y);
+		direction = direction + random_range(-1,1) - 45;
+		speed = 10;
+		image_angle = direction;
+		break;
+		
+		case Effect.Basic_Heal: 
+		if (target.hp + effectValue[| 0] > target.maxHp) 
+		{
+			target.hp = target.maxHp
+		}
+		else target.hp += effectValue[| 0];
+		break
 	}
-	else target.hp += ability.effectValue[| 0];
-	break
 }
 
 // Create floating combat text
-if (global.DamageDealt > 0) var txt_obj = instance_create_layer(target.x,target.y,"Text",obj_floating_combat_text);
+
+//if (global.DamageDealt > 0) 
+//{
+	instance_create_layer(target.x,target.y,"Text",obj_floating_combat_text);
+//}
+
 //txt_obj.text = string(global.DamageDealt);
 //global.DamageDealt = 0;

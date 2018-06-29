@@ -3,10 +3,12 @@
 ini_open("datafiles/Abilities.ini");
 
 var abilityNum = 1;
-while(ini_section_exists(abilityNum)) 
+
+//while(ini_section_exists(abilityNum)) 
+while(abilityNum <= 8) 
 {
 	// Create new ability and add it to the map.
-	var ability = instance_create_layer(0, 0, "instance_layer", obj_ability);
+	var ability = instance_create_layer(0, 0, "Abilities", obj_ability);
 	
 	// Add the data.
 	ability.name = ini_read_string(abilityNum, "name", 0);

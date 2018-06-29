@@ -9,9 +9,9 @@ maxActions = 3;
 actions = maxActions;
 attackRange = MELEE_RANGE
 attackRangePix = attackRange * CELL_SIZE;
-defaultAttackAbility = "Melee";
-defaultSupportAbility = "Heal";
-hp = 1;
+defaultAttackAbility = "Dagger";
+defaultSupportAbility = "Lessor Heal";
+hp = 12;
 maxHp = hp;
 
 

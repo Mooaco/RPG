@@ -1,12 +1,13 @@
-/// Variables
+///@desc Variables
 name = "UnNamed";
 range = MELEE_RANGE;
 
 // Effects
-display = "empty.png";
-visualEffect = "empty.png";
+display = "spr_empty";
+visualEffect = "spr_empty";
 effect = ds_list_create();
 effectValue = ds_list_create();
+effectDuration = ds_list_create();
 numEffects = 0;
 
 // Damage Data

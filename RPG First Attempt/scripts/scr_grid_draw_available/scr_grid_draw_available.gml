@@ -34,7 +34,7 @@ if (!global.Moving)
 	}
 	
 	// Block test walls
-	with (obj_wall) mp_grid_add_cell(global.CombatGrid, floor(x / CELL_SIZE), floor(y / CELL_SIZE))
+	with (obj_wall_small) mp_grid_add_cell(global.CombatGrid, floor(x / CELL_SIZE), floor(y / CELL_SIZE))
 
 	// draw availble spaces
 	with (character)

@@ -1,8 +1,8 @@
 /// Fade out text
 
-//alpha += 0.01;
+alpha -= 0.01;
 ypos += 1;
 
-draw_text_color(x, y - ypos, text, 0, 0, 0 ,0 , 1 - alpha);
+draw_text_color(x, y - ypos, text, c_white, c_white, c_white ,c_white , alpha);
 
-if (ypos >= 100) instance_destroy();
+if (alpha <= 0) instance_destroy();
