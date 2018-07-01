@@ -20,14 +20,15 @@ with (ability)
 
 	x = attacker.x;
 	y = attacker.y;
+	var tempEffect = effect[| 0];
 	
-	switch (effect[| 0])
+	switch (tempEffect)
 	{
 		case Effect.Basic_Damage:
 		target.hp -= effectValue[| 0];
 		global.DamageDealt = effectValue[| 0];
-		
 		break;
+		
 		case Effect.Basic_Range:
 		target.hp -= effectValue[| 0];
 		global.DamageDealt = effectValue[| 0];
@@ -53,7 +54,8 @@ with (ability)
 
 //if (global.DamageDealt > 0) 
 //{
-	instance_create_layer(target.x,target.y,"Text",obj_floating_combat_text);
+	var floatingText = instance_create_layer(target.x,target.y,"Text",obj_floating_combat_text);
+	floatingText.text = global.DamageDealt;
 //}
 
 //txt_obj.text = string(global.DamageDealt);

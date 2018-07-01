@@ -5,7 +5,7 @@ var _speed = argument0.spd;
 var camera_target = camera_get_view_target(view_camera[0]);
 var maskOffset = 5;
 
-if (obj_camera.unlocked == true) camera_set_view_target(view_camera[0],obj_camera)
+if (obj_camera.unlocked == true) camera_set_view_target(view_camera[0], obj_camera)
 
 // Keyboard Move Left
 if (keyboard_check(vk_left) || keyboard_check(ord("A")))

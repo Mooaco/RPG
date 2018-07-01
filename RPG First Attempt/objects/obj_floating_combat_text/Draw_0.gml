@@ -1,4 +1,4 @@
-/// Fade out text
+///@desc Fade out text
 
 alpha -= 0.01;
 ypos += 1;
