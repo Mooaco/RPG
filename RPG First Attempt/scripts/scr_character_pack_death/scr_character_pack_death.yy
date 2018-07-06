@@ -1,8 +1,8 @@
 {
-    "id": "8442309c-09d8-44a4-8cff-1326ff66843e",
+    "id": "1994b1c2-3951-4df3-a9ee-c1508d8fd4c1",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "scr_create_basic_ability",
+    "name": "scr_character_pack_death",
     "IsCompatibility": false,
     "IsDnD": false
 }

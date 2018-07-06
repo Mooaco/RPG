@@ -119,6 +119,14 @@
             }
         },
         {
+            "Key": "1994b1c2-3951-4df3-a9ee-c1508d8fd4c1",
+            "Value": {
+                "id": "98381be3-d97e-4f10-b644-547f64d78f57",
+                "resourcePath": "scripts\\scr_character_pack_death\\scr_character_pack_death.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "1a490050-b1a0-41bc-b675-40c0c95a09ef",
             "Value": {
                 "id": "0f29bb20-32e5-4da9-be8d-d3a19d039671",
@@ -223,6 +231,14 @@
             }
         },
         {
+            "Key": "5c12be6c-07cd-46d9-a03a-474d6086e9ca",
+            "Value": {
+                "id": "dbee3ec7-e957-4f02-bd26-8e17ce111cc4",
+                "resourcePath": "sprites\\spr_tile_dungeon\\spr_tile_dungeon.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "64024003-6d5a-49fa-84b4-39484addbc92",
             "Value": {
                 "id": "44ca1f5c-589b-41c8-90d2-0871f675306c",
@@ -287,6 +303,14 @@
             }
         },
         {
+            "Key": "79263f8b-cde6-4efe-bb2a-ab2b680b2e94",
+            "Value": {
+                "id": "212e36d5-61a5-4204-a609-9ef7c790c231",
+                "resourcePath": "scripts\\scr_effect_conversion\\scr_effect_conversion.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "7ab33c16-33e2-41b8-9bca-cf77c2f4506b",
             "Value": {
                 "id": "b74c6630-1680-4b33-b291-072a49fa76cc",
@@ -311,11 +335,11 @@
             }
         },
         {
-            "Key": "8442309c-09d8-44a4-8cff-1326ff66843e",
+            "Key": "83c69023-0a85-4267-b952-9bb87d199a01",
             "Value": {
-                "id": "62815e06-a93b-4f2b-9866-6c88665e15aa",
-                "resourcePath": "scripts\\scr_create_basic_ability\\scr_create_basic_ability.yy",
-                "resourceType": "GMScript"
+                "id": "c215da9e-6fe0-42f5-9d86-11bb89b3cb69",
+                "resourcePath": "rooms\\rm_test\\rm_test.yy",
+                "resourceType": "GMRoom"
             }
         },
         {
@@ -332,6 +356,14 @@
                 "id": "23bab117-cc52-45c9-a3ca-52d0cdb7e125",
                 "resourcePath": "scripts\\scr_camera_zoom\\scr_camera_zoom.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "885acb55-b07e-4b48-ad0a-ace4aba38340",
+            "Value": {
+                "id": "b3aab42b-71c0-434f-89c8-84a78a2176ca",
+                "resourcePath": "tilesets\\tile_dungeon\\tile_dungeon.yy",
+                "resourceType": "GMTileSet"
             }
         },
         {
@@ -356,6 +388,14 @@
                 "id": "ea7cc8f0-e292-4a57-b52a-daeeb8b2b099",
                 "resourcePath": "sprites\\spr_grid_highlighted\\spr_grid_highlighted.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "9d89e39c-46b0-4ddb-b03c-54f979a72c03",
+            "Value": {
+                "id": "ca04133d-03ce-4c27-a7ae-9ab822508351",
+                "resourcePath": "scripts\\scr_load_ability\\scr_load_ability.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -626,7 +666,9 @@
         "e34b8aee-481b-4f0a-869e-dda1688e6f3d",
         "3df2d751-aeb7-4e98-84d7-e52bc0cbe942",
         "bb9b9fb0-0a41-45a1-bd8e-28de6f0428dc",
-        "8442309c-09d8-44a4-8cff-1326ff66843e"
+        "1994b1c2-3951-4df3-a9ee-c1508d8fd4c1",
+        "9d89e39c-46b0-4ddb-b03c-54f979a72c03",
+        "79263f8b-cde6-4efe-bb2a-ab2b680b2e94"
     ],
     "tutorial": ""
 }

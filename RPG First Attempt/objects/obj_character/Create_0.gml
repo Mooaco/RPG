@@ -1,4 +1,4 @@
-// Define Variables
+// @desc Define Variables
 event_inherited();
 hostile = true;
 spd = 3;
@@ -13,7 +13,10 @@ defaultAttackAbility = "Dagger";
 defaultSupportAbility = "Lessor Heal";
 hp = 12;
 maxHp = hp;
-
+aggroRange = 5;
+aggroRangePix = aggroRange * CELL_SIZE;
+packSize = 1;
+packID = 0;
 
 
 historySize = 100;

@@ -25,4 +25,8 @@ for (var i = 0; i <= quantity - 1; i++)
 	last.attackable = attackable;
 	last.hp = hp;
 	last.maxHp = hp;
+	last.packSize = quantity;
+	last.packID = global.PackIDGen
 }
+
+global.PackIDGen += 1;

@@ -24,12 +24,12 @@ with (ability)
 	
 	switch (tempEffect)
 	{
-		case Effect.Basic_Damage:
+		case Effect.Damage_Melee:
 		target.hp -= effectValue[| 0];
 		global.DamageDealt = effectValue[| 0];
 		break;
 		
-		case Effect.Basic_Range:
+		case Effect.Damage_Range:
 		target.hp -= effectValue[| 0];
 		global.DamageDealt = effectValue[| 0];
 		// create sprite and movement
@@ -40,7 +40,7 @@ with (ability)
 		image_angle = direction;
 		break;
 		
-		case Effect.Basic_Heal: 
+		case Effect.Heal_Range: 
 		if (target.hp + effectValue[| 0] > target.maxHp) 
 		{
 			target.hp = target.maxHp

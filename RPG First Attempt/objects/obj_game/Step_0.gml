@@ -3,7 +3,21 @@
 // Check if its the players turn
 if (global.PlayersTurn)
 {
+	
 	/// IN COMBAT - INPUT ///
+	
+	// Check if leaving Combat
+	if (global.EndCombat)
+	{
+		global.EndCombat = false;
+		global.InCombat = false;
+		instance_destroy(obj_grid);
+		instance_destroy(obj_grid_cell);
+		instance_destroy(obj_grid_cell_available);
+		scr_camera_lock(global.Selected);
+		instance_create_layer(global.Selected.x,global.Selected.y,"Followers",obj_follower);
+	}
+	
 	if (global.InCombat)
 	{
 		// End character turn
@@ -25,12 +39,21 @@ if (global.PlayersTurn)
 			}else if (instance_position(mouse_x, mouse_y, obj_grid_cell_attackable))
 			{
 				global.Target = instance_position(mouse_x, mouse_y, obj_entity);
-				global.Attacking = true;
-				// If out of range move closer
+				
+				// If out of range move closer then attack (requires 2 action points)
 				if (scr_pythagoras(global.Target.x,global.Target.y, global.Selected.x, global.Selected.y) > global.Selected.attackRangePix)
 				{
-					var _cell = scr_grid_find_closest_free_cell(global.Target.x, global.Target.y, global.Selected);
+					if (global.Selected.actions >= 2)
+					{
+					var _cell = scr_grid_find_closest_free_cell(global.Target.x, global.Target.y);
 					scr_move_combat(_cell.x, _cell.y, global.Selected);
+					global.Attacking = true;
+					}
+					
+				}// Else if in range then attack (requires 1 action points)
+				else if (global.Selected.actions >= 1) 
+				{
+					global.Attacking = true;
 				}
 			}
 		}
@@ -47,27 +70,60 @@ if (global.PlayersTurn)
 			}
 		}
 		
-		// Uses basic attack if finished moving
-		if (global.Attacking == true)
+		// Uses basic attack if not moving
+		if (global.Attacking)
 		{
-			if (global.Moving == false)
+			if (!global.Moving)
 			{
 				global.Attacking = false;
 				scr_character_attack(global.Selected.defaultAttackAbility, global.Target);
 				global.Selected.actions--;
+				scr_grid_draw_available(global.Selected);
 			}
 		}
+		
+		// Force redraw grid
+		if (global.ReDraw)
+		{
+			scr_grid_draw_available(global.Selected);
+			global.ReDraw = false;
+		}
+		
+
 	}
 
-	// Out of combat key set
+
+
 	if (!global.InCombat)
 	{
+		/// OUT OF COMBAT - INPUT ///
 		if (keyboard_check_pressed(vk_control)) scr_camera_lock(obj_camera.unlocked);
+		
+		
+		
+		
+		/// OUT OF COMBAT - LOGIC ///
+		if (global.EnterCombat == true)
+		{
+			global.InCombat = true;
+			global.EnterCombat = false;
+			instance_create_layer(0,0,"Grid",obj_grid);
+			scr_grid_snap(global.Selected, false, true);
+			scr_camera_lock(false);
+			scr_camera_jump_to_player();
+			scr_destroy_followers()
+			global.NumFriendlies = 1;
+			global.NumHostiles = 3;
+		}
+		
+		
 	}
 
 	// All key sets
 	scr_move_WSAD(global.Selected);
 
+
+	
 	// Draw Highlighted
 	scr_grid_draw_highlighted();
 	
@@ -83,7 +139,4 @@ if (global.PlayersTurn)
 	}
 }
 
-
-
-
-
+	/// EVERYONE OUT OF COMBAT - LOGIC ///

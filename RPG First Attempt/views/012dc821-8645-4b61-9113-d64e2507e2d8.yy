@@ -7,7 +7,8 @@
         "dfae45e1-f7d5-4f0c-af91-6f9b6fe88188",
         "e34b8aee-481b-4f0a-869e-dda1688e6f3d",
         "3df2d751-aeb7-4e98-84d7-e52bc0cbe942",
-        "bb9b9fb0-0a41-45a1-bd8e-28de6f0428dc"
+        "bb9b9fb0-0a41-45a1-bd8e-28de6f0428dc",
+        "1994b1c2-3951-4df3-a9ee-c1508d8fd4c1"
     ],
     "filterType": "GMScript",
     "folderName": "Character",

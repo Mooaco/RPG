@@ -1,13 +1,13 @@
 enum Effect
 {
-	Basic_Damage,
-	Basic_Heal,
-	Basic_Range,
+	Damage_Melee,
+	Damage_Range,
+	Heal_Range
 }
 enum Dir
 {
 	Down = 0,
-	Right = 1,
+	Left = 1,
 	Up = 2,
-	Left = 3
+	Right = 3
 }

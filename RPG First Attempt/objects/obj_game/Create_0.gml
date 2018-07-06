@@ -13,13 +13,19 @@ global.CombatGrid = mp_grid_create(LEFT_OFFSET,RIGHT_OFFSET,room_width/CELL_SIZE
 global.Path = path_add();
 global.Moving = false;
 global.Attacking = false;
+global.ReDraw = false;
 global.PlayersTurn = true;
 global.DamageDealt = 0;
 global.Abilities = ds_map_create();
-scr_load_abilities(global.Abilities);
+scr_load_ability();
 global.Target = noone;
 global.Selected = instance_create_layer(global.SpawnLocation_x ,global.SpawnLocation_y, "Player", obj_player);
 instance_create_layer(global.SpawnLocation_x ,global.SpawnLocation_y, "Camera", obj_camera);
+global.EnterCombat = false;
+global.EndCombat = false;
+global.NumHostiles = 0;
+global.NumFriendlies = 0;
+global.PackIDGen = 100;
 
 scr_character_spawn(obj_character, 3, 1250, 1000, true, true, 12);
 scr_camera_lock(true);
