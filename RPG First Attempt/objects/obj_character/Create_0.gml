@@ -17,6 +17,8 @@ aggroRange = 5;
 aggroRangePix = aggroRange * CELL_SIZE;
 packSize = 1;
 packID = 0;
+inCombat = false;
+initiative = random(5) + spd;
 
 
 historySize = 100;

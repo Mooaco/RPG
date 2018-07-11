@@ -31,3 +31,8 @@ if (zoom == CameraZoomIn && global.CurrentZoom > min_Zoom)
 	global.CurrentZoom += zoom_Increment;
 	camera_set_view_size(view_camera[0], CameraDefaultWidth * global.CurrentZoom, CameraDefaultHeight * global.CurrentZoom)
 }
+
+global.ViewWidth = CameraDefaultWidth * global.CurrentZoom;
+global.ViewHeight = CameraDefaultHeight * global.CurrentZoom;
+
+if (instance_exists(obj_init_tracker_controller)) obj_init_tracker_controller.updateScreenPos = true;

@@ -14,8 +14,12 @@ if (global.PlayersTurn)
 		instance_destroy(obj_grid);
 		instance_destroy(obj_grid_cell);
 		instance_destroy(obj_grid_cell_available);
+		instance_destroy(obj_init_tracker)
+		instance_destroy(obj_init_tracker_controller)
 		scr_camera_lock(global.Selected);
 		instance_create_layer(global.Selected.x,global.Selected.y,"Followers",obj_follower);
+		scr_character_leave_combat_all()
+		
 	}
 	
 	if (global.InCombat)
@@ -25,6 +29,7 @@ if (global.PlayersTurn)
 		{
 			scr_character_startturn(global.Selected);
 			scr_grid_draw_available(global.Selected);
+			scr_initiative_update_trackers();
 		}
 		
 		// Left mouse pressed
@@ -88,8 +93,6 @@ if (global.PlayersTurn)
 			scr_grid_draw_available(global.Selected);
 			global.ReDraw = false;
 		}
-		
-
 	}
 
 
@@ -103,11 +106,15 @@ if (global.PlayersTurn)
 		
 		
 		/// OUT OF COMBAT - LOGIC ///
+		
+		// Enter combat
 		if (global.EnterCombat == true)
 		{
 			global.InCombat = true;
 			global.EnterCombat = false;
+			scr_initiative_build_list();
 			instance_create_layer(0,0,"Grid",obj_grid);
+			instance_create_layer(0,0,"Text",obj_init_tracker_controller);
 			scr_grid_snap(global.Selected, false, true);
 			scr_camera_lock(false);
 			scr_camera_jump_to_player();
@@ -115,8 +122,6 @@ if (global.PlayersTurn)
 			global.NumFriendlies = 1;
 			global.NumHostiles = 3;
 		}
-		
-		
 	}
 
 	// All key sets

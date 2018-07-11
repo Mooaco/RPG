@@ -3,8 +3,11 @@
 #macro RIGHT_OFFSET 0
 #macro OFFSET CELL_SIZE / 2
 #macro MELEE_RANGE 1.5
+#macro PLAYER_PACK_ID 1
 
 global.CurrentZoom = 1;
+global.ViewWidth = CameraDefaultWidth;
+global.ViewHeight = CameraDefaultHeight;
 global.CameraLock = false;
 global.InCombat = false;
 global.SpawnLocation_x = 220
@@ -25,7 +28,8 @@ global.EnterCombat = false;
 global.EndCombat = false;
 global.NumHostiles = 0;
 global.NumFriendlies = 0;
-global.PackIDGen = 100;
+global.PackIDGen = 1;
+global.InitiativeList = ds_list_create();
 
 scr_character_spawn(obj_character, 3, 1250, 1000, true, true, 12);
 scr_camera_lock(true);

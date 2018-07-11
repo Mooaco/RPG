@@ -2,7 +2,7 @@ event_inherited();
 
 // Set Default States (should be with rest of game starting code)
 numFollowers = 0;
-
+packID = PLAYER_PACK_ID;
 xMoveHistory = ds_list_create();
 yMoveHistory = ds_list_create();
 

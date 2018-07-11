@@ -14,6 +14,8 @@ if (!global.InCombat)
 	if (distance_to_object(global.Selected) <= aggroRangePix && hostile)
 	{
 		global.EnterCombat = true;
+		scr_pack_enter_combat(packID);
+		scr_pack_enter_combat(global.Selected.packID);
 	}
 }
 
